@@ -25,6 +25,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap&subset=cyrillic" rel="stylesheet">
   <script src="<?=SITE_TEMPLATE_PATH?>/lang/<?=strtolower(SITE_LANG)?>/script.messages.js?2"></script>
+  <?$APPLICATION->ShowHead();?>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
 <div id="panel"><?$APPLICATION->ShowPanel();?></div>
