@@ -5,3 +5,7 @@
   top: 10px;
   background: #8b0333;
 }
+.nav-item:hover .b-menu__linkhover {
+  background: #fff;
+  cursor: pointer;
+}
