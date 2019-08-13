@@ -28,9 +28,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
   <?$APPLICATION->ShowHead();?>
 </head>
 
-<body>
-<div id="panel"><?$APPLICATION->ShowPanel();?></div>
-<div class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-dark navbar-danger">

@@ -2,9 +2,9 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2014-<?=date('Y')?> <a href="https://shipstores.net">ShipStores.net</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
+    <nav class="navbar navbar-expand navbar-dark navbar-danger navbar-fixed-bottom">
+      <strong>Copyright &copy; 2014-<?=date('Y')?> <a href="https://shipstores.net">ShipStores.net</a>.</strong>
+      <a class="navbar-brand abs" href="#">All rights reserved.</a>
       <?$APPLICATION->IncludeComponent(
         "bitrix:menu",
         "bottom.lte",
@@ -24,11 +24,10 @@
         ),
         false
       );?>
-    </div>
+    </nav>
   </footer>
 </div>
 <!-- ./wrapper -->
-</div>
 <?// сделано для экономии вызывов функций
 require($_SERVER["DOCUMENT_ROOT"]."/include/7studio.php");
 ?>
