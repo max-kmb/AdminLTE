@@ -4,8 +4,7 @@
   <!-- Main Footer -->
   <footer class="main-footer">
     <nav class="navbar navbar-expand navbar-dark navbar-danger navbar-fixed-bottom">
-      <strong>Copyright &copy; 2014-<?=date('Y')?> <a href="https://shipstores.net">ShipStores.net</a>.</strong>
-      <a class="navbar-brand abs" href="#">All rights reserved.</a>
+      <strong>Copyright &copy; 2016-<?=date('Y')?> <a href="https://shipstores.net">ShipStores.net</a></strong>
       <?$APPLICATION->IncludeComponent(
         "bitrix:menu",
         "bottom.lte",
