@@ -1,5 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-
+</div>
+<!-- /.content-wrapper -->
   <!-- Main Footer -->
   <footer class="main-footer">
     <nav class="navbar navbar-expand navbar-dark navbar-danger navbar-fixed-bottom">
@@ -28,9 +29,6 @@
   </footer>
 </div>
 <!-- ./wrapper -->
-<?// сделано для экономии вызывов функций
-require($_SERVER["DOCUMENT_ROOT"]."/include/7studio.php");
-?>
 <!-- REQUIRED SCRIPTS -->
 <!-- jQuery -->
 <script src="<?=SITE_TEMPLATE_PATH?>/plugins/jquery/jquery.min.js"></script>

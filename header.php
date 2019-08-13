@@ -167,7 +167,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
     <a href="<?=SITE_DIR?>" class="brand-link">
       <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/logo-128.png" alt="shipstores.net" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">shipstores.net</span>
+      <span class="brand-text font-weight-bolder">shipstores.net</span>
     </a>
 
     <!-- Sidebar -->
