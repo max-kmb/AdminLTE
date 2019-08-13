@@ -18,6 +18,10 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- flag-icon-css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
@@ -153,16 +157,17 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item dropdown show">
-        <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
+      <!-- Language Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="flag-icon flag-icon-us"></i>
         </a>
-        <div class="dropdown-menu dropdown-menu-right p-0 show">
+        <div class="dropdown-menu dropdown-menu-right p-0">
           <a href="#" class="dropdown-item active">
             <i class="flag-icon flag-icon-us mr-2"></i> English
           </a>
           <a href="#" class="dropdown-item">
-            <i class="flag-icon flag-icon-ru mr-2"></i> Русский
+            <i class="flag-icon flag-icon-ru mr-2"></i> German
           </a>
         </div>
       </li>

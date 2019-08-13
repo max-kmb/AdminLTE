@@ -33,6 +33,8 @@
 <script src="<?=SITE_TEMPLATE_PATH?>/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="<?=SITE_TEMPLATE_PATH?>/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- FastClick -->
+<script src="<?=SITE_TEMPLATE_PATH?>/plugins/fastclick/fastclick.js"></script>
 <!-- overlayScrollbars -->
 <script src="<?=SITE_TEMPLATE_PATH?>/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
