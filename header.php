@@ -622,5 +622,3 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-  </div>
-  <!-- /.content-wrapper -->
