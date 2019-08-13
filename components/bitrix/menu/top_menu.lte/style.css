@@ -1,8 +1,8 @@
 .b-menu__linkhover {
   width: 100%;
-  height: 3px;
+  height: 0.2rem;
   position: relative;
-  top: 10px;
+  top: 0.3rem;
   background: #8b0333;
 }
 .nav-item:hover .b-menu__linkhover {

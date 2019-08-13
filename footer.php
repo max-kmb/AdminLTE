@@ -4,9 +4,31 @@
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-<?=date('Y')?> <a href="https://shipstores.net">ShipStores.net</a>.</strong>
     All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <?$APPLICATION->IncludeComponent(
+        "bitrix:menu",
+        "bottom.lte",
+        array(
+          "COMPONENT_TEMPLATE" => "bottom",
+          "ROOT_MENU_TYPE" => "bottom".strtolower(SITE_LANG),
+          "MENU_CACHE_TYPE" => "N",
+          "MENU_CACHE_TIME" => "3600",
+          "MENU_CACHE_USE_GROUPS" => "Y",
+          "MENU_CACHE_GET_VARS" => array(
+          ),
+          "MAX_LEVEL" => "1",
+          "CHILD_MENU_TYPE" => "bottom".strtolower(SITE_LANG),
+          "USE_EXT" => "Y",
+          "DELAY" => "N",
+          "ALLOW_MULTI_SELECT" => "N"
+        ),
+        false
+      );?>
+    </div>
   </footer>
 </div>
 <!-- ./wrapper -->
+</div>
 <?// сделано для экономии вызывов функций
 require($_SERVER["DOCUMENT_ROOT"]."/include/7studio.php");
 ?>
