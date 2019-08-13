@@ -147,7 +147,11 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
       <!-- Language Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="flag-icon flag-icon-us"></i>
+          <? if(SITE_LANG == 'EN'): ?>
+            <i class="flag-icon flag-icon-us"></i>
+          <? else: ?>
+            <i class="flag-icon flag-icon-ru"></i>
+          <? endif; ?>
         </a>
         <div class="dropdown-menu dropdown-menu-right p-0">
           <a href="<?=$APPLICATION->GetCurPage()?>?LANG=EN" class="dropdown-item <?if(SITE_LANG == 'EN'):?> active<?endif;?>">
