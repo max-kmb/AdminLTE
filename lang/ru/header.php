@@ -16,6 +16,7 @@ $MESS["MENU_PROFILE_MESS_14"] = "Доска объявлений";
 $MESS["MENU_PROFILE_MESS_15"] = "Рекламные баннеры";
 $MESS["MENU_PROFILE_MESS_16"] = "Email рассылка";
 $MESS["MENU_PROFILE_MESS_17"] = "События и новости";
+$MESS["MENU_PROFILE_MESS_18"] = "Оповещения";
 $MESS["MENU_NOTE_1"] = " оповещений";
 $MESS["MENU_NOTE_2"] = " новых";
 $MESS["MENU_NOTE_3"] = " просмотренных";

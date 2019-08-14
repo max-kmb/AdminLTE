@@ -191,15 +191,16 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
       $urls=explode("/",$url);
       if ($urls[1]=="pro"){
       }
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_8", null, $arLangMessage), "path" => "/", "icons" => "<i class=\"nav-icon fas fa-info\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_1", null, $arLangMessage), "path" => "/deals/", "icons" => "<i class=\"nav-icon fas fa-th\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_11", null, $arLangMessage), "path" => "/store/", "icons" => "<i class=\"nav-icon fas fa-store-alt\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_14", null, $arLangMessage), "path" => "/board/", "icons" => "<i class=\"nav-icon fas fa-file-invoice\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_15", null, $arLangMessage), "path" => "/advertising/", "icons" => "<i class=\"nav-icon fas fa-ad\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_16", null, $arLangMessage), "path" => "/services/email/", "icons" => "<i class=\"nav-icon fas fa-envelope\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_17", null, $arLangMessage), "path" => "/news/", "icons" => "<i class=\"nav-icon fas fa-newspaper\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_7", null, $arLangMessage), "path" => "/sphere/", "icons" => "<i class=\"nav-icon fas fa-cubes\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_13", null, $arLangMessage), "path" => "/analytics/", "icons" => "<i class=\"nav-icon fas fa-chart-pie\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_8", null, $arLangMessage), "path" => "/profile/", "icons" => "<i class=\"nav-icon fas fa-info\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_1", null, $arLangMessage), "path" => "/profile/deals/", "icons" => "<i class=\"nav-icon fas fa-th\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_11", null, $arLangMessage), "path" => "/profile/store/", "icons" => "<i class=\"nav-icon fas fa-store-alt\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_14", null, $arLangMessage), "path" => "/profile/board/", "icons" => "<i class=\"nav-icon fas fa-file-invoice\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_15", null, $arLangMessage), "path" => "/profile/advertising/", "icons" => "<i class=\"nav-icon fas fa-ad\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_16", null, $arLangMessage), "path" => "/profile/services/email/", "icons" => "<i class=\"nav-icon fas fa-envelope\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_17", null, $arLangMessage), "path" => "/profile/news/", "icons" => "<i class=\"nav-icon fas fa-newspaper\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_7", null, $arLangMessage), "path" => "/profile/sphere/", "icons" => "<i class=\"nav-icon fas fa-cubes\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_13", null, $arLangMessage), "path" => "/pro/analytics/", "icons" => "<i class=\"nav-icon fas fa-chart-pie\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_18", null, $arLangMessage), "path" => "/pro/notify/", "icons" => "<i class=\"nav-icon fas fa-bell\"></i>"];
       ?>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -208,7 +209,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
                with font-awesome or any other icon font library -->
           <? foreach ($arMenu as $itemMenu): ?>
           <li class="nav-item">
-            <a href="/profile<?=$itemMenu['path'];?>" class="nav-link <?if (($urls[1]=="pro")&&($urls[2]==str_replace("/","",$itemMenu['path']))) echo " active";?>">
+            <a href="<?=$itemMenu['path'];?>" class="nav-link <?if (($urls[1]=="pro")&&($urls[2]==str_replace("/","",$itemMenu['path']))) echo " active";?>">
               <?=$itemMenu['icons'];?>
               <p>
                 <?=$itemMenu['name'];?>

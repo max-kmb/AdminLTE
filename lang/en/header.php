@@ -16,6 +16,7 @@ $MESS["MENU_PROFILE_MESS_14"] = "Bulletin Board";
 $MESS["MENU_PROFILE_MESS_15"] = "banners";
 $MESS["MENU_PROFILE_MESS_16"] = "Email newsletter";
 $MESS["MENU_PROFILE_MESS_17"] = "Events and news";
+$MESS["MENU_PROFILE_MESS_18"] = "Notifications";
 $MESS["MENU_NOTE_1"] = " Notifications";
 $MESS["MENU_NOTE_2"] = " new messages";
 $MESS["MENU_NOTE_3"] = " viewed messages";
