@@ -14,7 +14,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Shipstores | Dashboard</title>
+  <title>Shipstores | <?=STTab::getMessage("MENU_PROFILE_MESS_13", null, $arLangMessage);?></title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/plugins/fontawesome-free/css/all.min.css">
@@ -129,17 +129,17 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
           <span class="badge badge-warning navbar-badge"><?=$CNTNotify['CNT']?></span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header"><?=$CNTNotifyAll['CNT']?> Notifications</span>
+          <span class="dropdown-item dropdown-header"><? echo $CNTNotifyAll['CNT'], STTab::getMessage("MENU_NOTE_1", null, $arLangMessage); ?></span>
           <div class="dropdown-divider"></div>
           <a href="/pro/notify/?new" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> <?=$CNTNotify['CNT']?> new messages
+            <i class="fas fa-envelope mr-2"></i> <?echo $CNTNotify['CNT'], STTab::getMessage("MENU_NOTE_2", null, $arLangMessage); ?>
           </a>
           <div class="dropdown-divider"></div>
           <a href="/pro/notify/?viewed" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> <?=$CNTNotifyAll['CNT']?> viewed messages
+            <i class="fas fa-file mr-2"></i> <? echo $CNTNotifyAll['CNT'], STTab::getMessage("MENU_NOTE_3", null, $arLangMessage); ?>
            </a>
           <div class="dropdown-divider"></div>
-          <a href="/pro/notify/" class="dropdown-item dropdown-footer">See All Notifications</a>
+          <a href="/pro/notify/" class="dropdown-item dropdown-footer"><? echo STTab::getMessage("MENU_NOTE_4", null, $arLangMessage); ?></a>
         </div>
       </li>
       <!-- Language Dropdown Menu -->
