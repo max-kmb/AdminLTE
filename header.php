@@ -118,30 +118,28 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
+      <?
+      $CNTNotify = STNotify::getNotifyNotViewedCnt();
+      $CNTNotifyViewed = STNotify::getNotifyViewedCnt();
+      $CNTNotifyAll = STNotify::getNotifyCnt();
+        ?>
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+          <span class="badge badge-warning navbar-badge"><?=$CNTNotify['CNT']?></span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <span class="dropdown-item dropdown-header"><?=$CNTNotifyAll['CNT']?> Notifications</span>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
+          <a href="/pro/notify/?new" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> <?=$CNTNotify['CNT']?> new messages
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
+          <a href="/pro/notify/?viewed" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> <?=$CNTNotifyAll['CNT']?> viewed messages
+           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          <a href="/pro/notify/" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
       <!-- Language Dropdown Menu -->
@@ -179,11 +177,13 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <? if($arCurUser['PERSONAL_PHOTO_60']): ?>
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?=$arCurUser['PERSONAL_PHOTO_60']['src']?>" class="img-circle elevation-2" alt="<?=$arCurUser['SHORT_NAME']?> Image">
         </div>
+        <? endif; ?>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?=$arCurUser['SHORT_NAME']?></a>
         </div>
       </div>
 
@@ -610,20 +610,3 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard v2</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
