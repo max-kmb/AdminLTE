@@ -136,7 +136,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
           </a>
           <div class="dropdown-divider"></div>
           <a href="/pro/notify/#viewed" class="dropdown-item">
-            <i class="fas fa-envelope-open mr-2"></i> <? echo $CNTNotifyAll['CNT'], STTab::getMessage("MENU_NOTE_3", null, $arLangMessage); ?>
+            <i class="fas fa-envelope-open mr-2"></i> <? echo $CNTNotifyViewed['CNT'], STTab::getMessage("MENU_NOTE_3", null, $arLangMessage); ?>
            </a>
           <div class="dropdown-divider"></div>
           <a href="/pro/notify/" class="dropdown-item dropdown-footer"><? echo STTab::getMessage("MENU_NOTE_4", null, $arLangMessage); ?></a>
