@@ -164,6 +164,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
       <?
       $url=$_SERVER['REQUEST_URI'];
       $urls=explode("/",$url);
+      $curURL="/".$urls[1]."/".$urls[2]."/";
       if ($urls[1]=="pro"){
       }
       $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_8", null, $arLangMessage), "path" => "/profile/", "icons" => "<i class=\"nav-icon fas fa-info\"></i>"];
@@ -190,7 +191,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
           <? foreach ($arMenu as $itemMenu):
             if ($itemMenu['path'] != "tree" && $itemMenu['path'] ) : ?>
               <li class="nav-item">
-                <a href="<?=$itemMenu['path'];?>" class="nav-link <?if (($urls[1]=="pro")&&($urls[2]==str_replace("/","",$itemMenu['path']))) echo " active";?>">
+                <a href="<?=$itemMenu['path'];?>" class="nav-link <?if ($curURL == $itemMenu['path']))) echo " active";?>">
                   <?=$itemMenu['icons'];?>
                   <p>
                     <?=$itemMenu['name'];?>
@@ -198,8 +199,8 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
                 </a>
               </li>
             <? elseif ($itemMenu['path'] == "tree") : ?>
-              <li class="nav-item has-treeview menu-open">
-                <a href="#" class="nav-link <?if (($urls[1]=="pro")&&($urls[2]==str_replace("/","",$itemMenu['path']))) echo " active";?>">
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
                   <?=$itemMenu['icons'];?>
                   <p>
                     <?=$itemMenu['name'];?>
