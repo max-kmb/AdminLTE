@@ -191,7 +191,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
           <? foreach ($arMenu as $itemMenu):
             if ($itemMenu['path'] != "tree" && $itemMenu['path'] ) : ?>
               <li class="nav-item">
-                <a href="<?=$itemMenu['path'];?>" class="nav-link <?if ($curURL == $itemMenu['path']))) echo " active";?>">
+                <a href="<?=$itemMenu['path'];?>" class="nav-link <?if ($curURL == $itemMenu['path']) echo " active";?>">
                   <?=$itemMenu['icons'];?>
                   <p>
                     <?=$itemMenu['name'];?>
