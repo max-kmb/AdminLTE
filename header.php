@@ -184,7 +184,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <? foreach ($arMenu as $itemMenu):
+          <? foreach ($arMenu as $itemMenu): ?>
               <li class="nav-item">
                 <a href="<?=$itemMenu['path'];?>" class="nav-link <? if ($curURL == $itemMenu['path']) echo ' active'; ?>">
                   <?=$itemMenu['icons'];?>
