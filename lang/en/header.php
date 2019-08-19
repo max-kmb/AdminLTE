@@ -23,4 +23,5 @@ $MESS["MENU_NOTE_1"] = " Notifications";
 $MESS["MENU_NOTE_2"] = " new messages";
 $MESS["MENU_NOTE_3"] = " viewed messages";
 $MESS["MENU_NOTE_4"] = "See All Notifications";
+$MESS["MENU_MESSAGE_1"] = " messages";
 ?>

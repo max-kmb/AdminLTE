@@ -24,4 +24,5 @@ $MESS["MENU_NOTE_1"] = " оповещений";
 $MESS["MENU_NOTE_2"] = " новых";
 $MESS["MENU_NOTE_3"] = " просмотренных";
 $MESS["MENU_NOTE_4"] = "Просмотреть Все";
+$MESS["MENU_MESSAGE_1"] = " сообщений";
 ?>
