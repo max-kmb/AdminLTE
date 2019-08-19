@@ -176,12 +176,8 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
       $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_17", null, $arLangMessage), "path" => "/profile/news/", "icons" => "<i class=\"nav-icon fas fa-newspaper\"></i>"];
       $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_7", null, $arLangMessage), "path" => "/profile/sphere/", "icons" => "<i class=\"nav-icon fas fa-cubes\"></i>"];
       $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_13", null, $arLangMessage), "path" => "/pro/analytics/", "icons" => "<i class=\"nav-icon fas fa-chart-pie\"></i>"];
-      // marker start of tree
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_20", null, $arLangMessage), "path" => "tree", "icons" => "<i class=\"nav-icon fas fa-mail-bulk\"></i>"];
       $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_18", null, $arLangMessage), "path" => "/pro/notify/", "icons" => "<i class=\"nav-icon fas fa-bell\"></i>"];
       $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_19", null, $arLangMessage), "path" => "/pro/messages/", "icons" => "<i class=\"nav-icon fas fa-comments\"></i>"];
-      // marker end of tree
-      $arMenu[] = ["name" => false, "path" => false, "icons" => false];
       ?>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -189,7 +185,6 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <? foreach ($arMenu as $itemMenu):
-            if ($itemMenu['path'] != "tree" && $itemMenu['path'] ) : ?>
               <li class="nav-item">
                 <a href="<?=$itemMenu['path'];?>" class="nav-link <?if ($curURL == $itemMenu['path']) echo " active";?>">
                   <?=$itemMenu['icons'];?>
@@ -198,20 +193,6 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
                   </p>
                 </a>
               </li>
-            <? elseif ($itemMenu['path'] == "tree") : ?>
-              <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
-                  <?=$itemMenu['icons'];?>
-                  <p>
-                    <?=$itemMenu['name'];?>
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-            <? else :?>
-                </ul>
-              </li>
-            <?endif; ?>
           <? endforeach; ?>
         </ul>
       </nav>
