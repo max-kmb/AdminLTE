@@ -224,7 +224,7 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
               </li>
             <? elseif ($itemMenu['path'] == "tree") : ?>
               <li class="nav-item has-treeview menu-open">
-                <a href="#" class="nav-link active">
+                <a href="#" class="nav-link <?if (($urls[1]=="pro")&&($urls[2]==str_replace("/","",$itemMenu['path']))) echo " active";?>">
                   <?=$itemMenu['icons'];?>
                   <p>
                     <?=$itemMenu['name'];?>
