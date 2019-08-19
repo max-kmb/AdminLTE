@@ -61,9 +61,17 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
+        <?
+        $CNTMessageNew = STMessage::getNotRead(CUser::GetID(),true);
+        $CNTMessageAll = STMessage::getAll(CUser::GetID(),true);
+        ?>
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
+          <? if($CNTMessageNew == 0) : ?>
+          <span class="badge badge-danger navbar-badge"><? echo $CNTMessageAll;?></span>
+          <? else : ?>
+          <span class="badge badge-warning navbar-badge"><? echo $CNTMessageNew;?></span>
+          <? endif; ?>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <a href="#" class="dropdown-item">
@@ -126,7 +134,11 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge"><?=$CNTNotify['CNT']?></span>
+          <? if($CNTNotify['CNT'] == 0) : ?>
+            <span class="badge badge-danger navbar-badge"><?=$CNTNotifyAll['CNT']?></span>
+          <? else :?>
+            <span class="badge badge-warning navbar-badge"><?=$CNTNotify['CNT']?></span>
+          <? endif; ?>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-item dropdown-header"><? echo $CNTNotifyAll['CNT'], STTab::getMessage("MENU_NOTE_1", null, $arLangMessage); ?></span>
