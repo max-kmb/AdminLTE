@@ -167,17 +167,17 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
       $curURL="/".$urls[1]."/".$urls[2]."/";
       if ($urls[1]=="pro"){
       }
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_8", null, $arLangMessage), "path" => "/profile/", "icons" => "<i class=\"nav-icon fas fa-info\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_1", null, $arLangMessage), "path" => "/profile/deals/", "icons" => "<i class=\"nav-icon fas fa-th\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_11", null, $arLangMessage), "path" => "/profile/store/", "icons" => "<i class=\"nav-icon fas fa-store-alt\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_14", null, $arLangMessage), "path" => "/profile/board/", "icons" => "<i class=\"nav-icon fas fa-file-invoice\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_15", null, $arLangMessage), "path" => "/profile/advertising/", "icons" => "<i class=\"nav-icon fas fa-ad\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_16", null, $arLangMessage), "path" => "/profile/services/email/", "icons" => "<i class=\"nav-icon fas fa-envelope\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_17", null, $arLangMessage), "path" => "/profile/news/", "icons" => "<i class=\"nav-icon fas fa-newspaper\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_7", null, $arLangMessage), "path" => "/profile/sphere/", "icons" => "<i class=\"nav-icon fas fa-cubes\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_13", null, $arLangMessage), "path" => "/pro/analytics/", "icons" => "<i class=\"nav-icon fas fa-chart-pie\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_18", null, $arLangMessage), "path" => "/pro/notify/", "icons" => "<i class=\"nav-icon fas fa-bell\"></i>"];
-      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_19", null, $arLangMessage), "path" => "/pro/messages/", "icons" => "<i class=\"nav-icon fas fa-comments\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_8", null, $arLangMessage), "path" => "/profile/", "icons" => "<i class=\"nav-icon fas fa-info text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_1", null, $arLangMessage), "path" => "/profile/deals/", "icons" => "<i class=\"nav-icon fas fa-th text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_11", null, $arLangMessage), "path" => "/profile/store/", "icons" => "<i class=\"nav-icon fas fa-store-alt text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_14", null, $arLangMessage), "path" => "/profile/board/", "icons" => "<i class=\"nav-icon fas fa-file-invoice text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_15", null, $arLangMessage), "path" => "/profile/advertising/", "icons" => "<i class=\"nav-icon fas fa-ad text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_16", null, $arLangMessage), "path" => "/profile/services/email/", "icons" => "<i class=\"nav-icon fas fa-envelope text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_17", null, $arLangMessage), "path" => "/profile/news/", "icons" => "<i class=\"nav-icon fas fa-newspaper text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_7", null, $arLangMessage), "path" => "/profile/sphere/", "icons" => "<i class=\"nav-icon fas fa-cubes text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_13", null, $arLangMessage), "path" => "/pro/analytics/", "icons" => "<i class=\"nav-icon fas fa-chart-pie text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_18", null, $arLangMessage), "path" => "/pro/notify/", "icons" => "<i class=\"nav-icon fas fa-bell text-danger\"></i>"];
+      $arMenu[] = ["name" => STTab::getMessage("MENU_PROFILE_MESS_19", null, $arLangMessage), "path" => "/pro/messages/", "icons" => "<i class=\"nav-icon fas fa-comments text-danger\"></i>"];
       ?>
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -197,8 +197,8 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
           <li class="nav-header"><hr></li>
           <li class="nav-item">
             <a href="?logout=yes" class="nav-link">
-              <i class="nav-icon far fa-sign-out-alt text-danger"></i>
-              <p class="text">STTab::getMessage("MENU_PROFILE_MESS_21", null, $arLangMessage)</p>
+              <i class="nav-icon fas fa-sign-out-alt text-danger"></i>
+              <p class="text"><? echo STTab::getMessage("MENU_PROFILE_MESS_21", null, $arLangMessage); ?></p>
             </a>
           </li>
         </ul>
