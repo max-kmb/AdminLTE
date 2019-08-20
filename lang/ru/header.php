@@ -19,6 +19,7 @@ $MESS["MENU_PROFILE_MESS_17"] = "События и новости";
 $MESS["MENU_PROFILE_MESS_18"] = "Оповещения";
 $MESS["MENU_PROFILE_MESS_19"] = "Сообщения";
 $MESS["MENU_PROFILE_MESS_20"] = "Служба сообщений";
+$MESS["MENU_PROFILE_MESS_21"] = "Выйти из личного кабинета";
 
 $MESS["MENU_NOTE_1"] = " оповещений";
 $MESS["MENU_NOTE_2"] = " новых";

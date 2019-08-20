@@ -194,6 +194,13 @@ $arLangMessage = \Bitrix\Main\Localization\Loc::loadLanguageFile(__FILE__, strto
                 </a>
               </li>
           <? endforeach; ?>
+          <li class="nav-header"><hr></li>
+          <li class="nav-item">
+            <a href="?logout=yes" class="nav-link">
+              <i class="nav-icon far fa-sign-out-alt text-danger"></i>
+              <p class="text">STTab::getMessage("MENU_PROFILE_MESS_21", null, $arLangMessage)</p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
